@@ -11,7 +11,7 @@ import { CITY } from '@/data/cities';
 import { useStore } from '@/store';
 
 export default function CameraScreen() {
-  const { t, city, startScan } = useStore();
+  const { t, lang, city, startScan } = useStore();
   const c = usePalette();
   const cam = useRef<CameraView>(null);
   const [perm, requestPerm] = useCameraPermissions();
@@ -45,7 +45,7 @@ export default function CameraScreen() {
     try {
       const pic = await cam.current.takePictureAsync({ quality: 0.6 });
       setPhoto(pic.uri);
-      const classification = await classify(pic.uri);
+      const classification = await classify(pic.uri, lang);
       startScan({ classification, photoUri: pic.uri });
       router.push('/result');
     } catch {

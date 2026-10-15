@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { demoClassification } from '@/api/classify';
+import { demoClassification, sendFeedback, type Verdict } from '@/api/classify';
 import { Flood } from '@/components/flood';
 import { Body, Button, Chip, Icon, Row, Title, usePalette } from '@/components/ui';
 import { CATEGORY } from '@/data/categories';
@@ -27,7 +27,12 @@ function ResultFor({ scanId, classification }: { scanId: string; classification:
   const { t, lang, city, history, record, correct } = useStore();
   const cityId = city!;
   const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [feedback, setFeedback] = useState<'yes' | 'no' | null>(null);
+  const [feedback, setFeedback] = useState<Verdict | null>(null);
+  const first = classification.parts[0];
+  const vote = (verdict: Verdict, corrected?: string) => {
+    setFeedback(verdict);
+    if (first && !scanId.startsWith('demo-')) sendFeedback({ city: cityId, predicted: first.category, confidence: first.confidence, verdict, corrected });
+  };
   const outcome = useMemo(() => decide(classification, cityId, lang, answers), [classification, cityId, lang, answers]);
   const close = () => (router.canGoBack() ? router.back() : router.replace('/'));
   const toSearch = () => {
@@ -41,7 +46,10 @@ function ResultFor({ scanId, classification }: { scanId: string; classification:
     const existing = history.find((h) => h.id === scanId);
     if (!existing) record({ id: scanId, at: new Date().toISOString(), city: cityId, parts });
     // Same scan, different answer: the user corrected it. History keeps the first answer struck through.
-    else if (JSON.stringify(existing.parts) !== JSON.stringify(parts)) correct(scanId, parts);
+    else if (JSON.stringify(existing.parts) !== JSON.stringify(parts)) {
+      correct(scanId, parts);
+      sendFeedback({ city: cityId, predicted: existing.parts[0].category, verdict: 'other', corrected: parts[0].category });
+    }
   }, [outcome, scanId, cityId, history, record, correct]);
 
   if (outcome.kind === 'answer') {
@@ -61,8 +69,8 @@ function ResultFor({ scanId, classification }: { scanId: string; classification:
           ) : (
             <View style={st.feedback}>
               <Text style={[st.feedbackText, { color: fg }]}>{t.result.helped}</Text>
-              <Thumb fg={fg} label={t.result.yes} icon="up" onPress={() => setFeedback('yes')} />
-              <Thumb fg={fg} label={t.result.no} icon="down" onPress={() => setFeedback('no')} />
+              <Thumb fg={fg} label={t.result.yes} icon="up" onPress={() => vote('yes')} />
+              <Thumb fg={fg} label={t.result.no} icon="down" onPress={() => vote('no')} />
               <Pressable accessibilityRole="button" onPress={() => router.push(`/correct/${scanId}`)} hitSlop={8} style={st.other}>
                 <Text style={[st.feedbackText, st.underline, { color: fg }]}>{t.result.other}</Text>
               </Pressable>
