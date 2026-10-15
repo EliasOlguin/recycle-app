@@ -40,7 +40,7 @@ export default function Onboarding() {
               <Body muted>{o.startSub}</Body>
             </View>
             <View>
-              <Body style={st.caption}>{CITY[city].name}</Body>
+              <Body muted style={{ marginBottom: 4 }}>{o.binsOf(CITY[city].name)}</Body>
               {bins.map((d) => (
                 <Row key={d.key}>
                   <Chip swatch={d.swatch} />
@@ -66,6 +66,5 @@ export default function Onboarding() {
 const st = StyleSheet.create({
   screen: { flex: 1 },
   content: { padding: 20, paddingTop: 32, gap: 24 },
-  caption: { fontSize: 13, fontWeight: '600', textTransform: 'uppercase', letterSpacing: 0.6, marginBottom: 4 },
   footer: { paddingHorizontal: 20, paddingBottom: 12 },
 });

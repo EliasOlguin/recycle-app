@@ -7,7 +7,12 @@ export default function TabsLayout() {
   const { t } = useStore();
   const c = usePalette();
   return (
-    <NativeTabs tintColor={c.ink}>
+    <NativeTabs
+      tintColor={c.ink}
+      backgroundColor={c.paper}
+      indicatorColor={c.rule}
+      labelStyle={{ color: c.muted, selected: { color: c.ink } }}
+      iconColor={{ default: c.muted, selected: c.ink }}>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>{t.tabs.camera}</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="camera" md="photo_camera" />

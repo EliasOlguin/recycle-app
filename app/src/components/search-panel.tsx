@@ -20,7 +20,7 @@ export function SearchPanel({ onPick, autoFocus }: { onPick: (hit: Hit) => void;
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={[st.field, { backgroundColor: c.dark ? '#1C1D1F' : '#F1F1F2' }]}>
+      <View style={[st.field, { backgroundColor: c.field }]}>
         <Icon name={{ ios: 'magnifyingglass', android: 'search', web: 'search' }} size={18} color={c.muted} />
         <TextInput
           value={q}
@@ -51,7 +51,7 @@ export function SearchPanel({ onPick, autoFocus }: { onPick: (hit: Hit) => void;
           const d = rule && city ? destination(city, rule.destination) : null;
           return (
             <Row onPress={() => onPick(item)}>
-              {d ? <Chip swatch={d.swatch} /> : <View style={st.noChip} />}
+              <Chip swatch={d?.swatch} />
               <View style={{ flex: 1 }}>
                 <Body style={{ fontWeight: '600' }}>{item.label}</Body>
                 <Body muted style={{ fontSize: 15 }}>{d ? d.german.replace(/­/g, '') : t.search.depends}</Body>
@@ -68,5 +68,4 @@ const st = StyleSheet.create({
   field: { flexDirection: 'row', alignItems: 'center', gap: 8, marginHorizontal: 20, marginBottom: 8, paddingHorizontal: 12, borderRadius: 12, minHeight: 44 },
   input: { flex: 1, fontSize: 17, paddingVertical: 10 },
   note: { paddingVertical: 12 },
-  noChip: { width: 28, height: 28, borderRadius: 7, borderWidth: 1.5, borderStyle: 'dashed', borderColor: '#9A9DA1' },
 });

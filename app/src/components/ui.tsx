@@ -1,18 +1,29 @@
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { SymbolView, type SymbolViewProps } from 'expo-symbols';
 import type { ReactNode } from 'react';
-import { Pressable, StyleSheet, Text, useColorScheme, View, type TextProps, type ViewStyle } from 'react-native';
+import { Platform, Pressable, StyleSheet, Text, useColorScheme, View, type TextProps, type ViewStyle } from 'react-native';
 
 import type { Swatch } from '@/data/types';
-import { Danger, Dark, Ink, Muted, Paper, Rule, SWATCH } from '@/theme';
+import { Danger, Dark, Field, Ink, Muted, Paper, Rule, SWATCH } from '@/theme';
 
 export function usePalette() {
   const dark = useColorScheme() === 'dark';
   return dark
-    ? { ink: Dark.ink, paper: Dark.paper, muted: Dark.muted, rule: Dark.rule, danger: '#F2B8B5', dark }
-    : { ink: Ink, paper: Paper, muted: Muted, rule: Rule, danger: Danger, dark };
+    ? { ink: Dark.ink, paper: Dark.paper, muted: Dark.muted, rule: Dark.rule, danger: Dark.danger, field: Dark.field, dark }
+    : { ink: Ink, paper: Paper, muted: Muted, rule: Rule, danger: Danger, field: Field, dark };
 }
 
+// Outline variants, matching the outline SF Symbols used on iOS.
+const OUTLINE: Record<string, string> = { thumb_up: 'thumb-up-off-alt', thumb_down: 'thumb-down-off-alt' };
+
 export function Icon({ name, size = 24, color }: { name: SymbolViewProps['name']; size?: number; color: string }) {
+  // On Android, symbols are font glyphs that grow with the system font scale and get clipped;
+  // the Material icon font can opt out of scaling, so icons keep their size like native ones.
+  const android = typeof name === 'object' ? name.android : undefined;
+  if (Platform.OS === 'android' && android) {
+    const glyph = (OUTLINE[android] ?? android.replace(/_/g, '-')) as keyof typeof MaterialIcons.glyphMap;
+    return <MaterialIcons name={glyph} size={size} color={color} allowFontScaling={false} />;
+  }
   return <SymbolView name={name} size={size} tintColor={color} />;
 }
 
@@ -33,11 +44,12 @@ type ButtonProps = {
   /** Colours for buttons that sit on a flood. */
   on?: { fg: string; bg: string };
   icon?: SymbolViewProps['name'];
+  leading?: ReactNode;
   style?: ViewStyle;
   disabled?: boolean;
 };
 
-export function Button({ label, onPress, kind = 'primary', on, icon, style, disabled }: ButtonProps) {
+export function Button({ label, onPress, kind = 'primary', on, icon, leading, style, disabled }: ButtonProps) {
   const c = usePalette();
   const bg = on?.bg ?? (kind === 'primary' ? c.ink : 'transparent');
   const fg = on?.fg ?? (kind === 'primary' ? c.paper : kind === 'destructive' ? c.danger : c.ink);
@@ -53,16 +65,20 @@ export function Button({ label, onPress, kind = 'primary', on, icon, style, disa
         kind === 'destructive' && { paddingHorizontal: 0, alignSelf: 'flex-start' },
         style,
       ]}>
+      {leading}
       {icon && <Icon name={icon} size={20} color={fg} />}
       <Text style={[s.buttonLabel, { color: fg }]}>{label}</Text>
     </Pressable>
   );
 }
 
-/** A lid-coloured square, the app's only colour outside a flood. */
-export function Chip({ swatch, size = 28 }: { swatch: Swatch; size?: number }) {
+/** A lid-coloured square, the app's only colour outside a flood. Without a swatch: "depends", a dashed empty lid. */
+export function Chip({ swatch, size = 28 }: { swatch?: Swatch; size?: number }) {
+  const c = usePalette();
+  if (!swatch)
+    return <View style={{ width: size, height: size, borderRadius: size / 4, borderWidth: 1.5, borderStyle: 'dashed', borderColor: c.muted }} />;
   const sw = SWATCH[swatch];
-  return <View style={{ width: size, height: size, borderRadius: size / 4, backgroundColor: sw.flood, borderTopWidth: size / 5, borderTopColor: sw.lid }} />;
+  return <View style={{ width: size, height: size, borderRadius: size / 4, backgroundColor: sw.flood, borderTopWidth: size / 5, borderTopColor: sw.lid, borderWidth: StyleSheet.hairlineWidth, borderColor: sw.lid }} />;
 }
 
 export function Row({

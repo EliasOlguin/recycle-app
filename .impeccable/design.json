@@ -1,0 +1,611 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T01:51:32.452Z",
+  "title": "Design System: Tonnendeckel",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(25.0% 0.000 0)",
+          "oklch(35.0% 0.000 0)",
+          "oklch(45.0% 0.000 0)",
+          "oklch(55.0% 0.000 0)",
+          "oklch(70.0% 0.000 0)",
+          "oklch(85.0% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(25.0% 0.000 0)",
+          "oklch(35.0% 0.000 0)",
+          "oklch(45.0% 0.000 0)",
+          "oklch(55.0% 0.000 0)",
+          "oklch(70.0% 0.000 0)",
+          "oklch(85.0% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Graphite",
+        "canonical": "#5C5F63",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 255.5)",
+          "oklch(25.0% 0.007 255.5)",
+          "oklch(35.0% 0.007 255.5)",
+          "oklch(45.0% 0.007 255.5)",
+          "oklch(55.0% 0.007 255.5)",
+          "oklch(70.0% 0.007 255.5)",
+          "oklch(85.0% 0.007 255.5)",
+          "oklch(95.0% 0.007 255.5)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Grey",
+        "canonical": "#E3E3E3",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(25.0% 0.000 0)",
+          "oklch(35.0% 0.000 0)",
+          "oklch(45.0% 0.000 0)",
+          "oklch(55.0% 0.000 0)",
+          "oklch(70.0% 0.000 0)",
+          "oklch(85.0% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Signal Red",
+        "canonical": "#B3261E",
+        "tonalRamp": [
+          "oklch(15.0% 0.178 28.7)",
+          "oklch(25.0% 0.178 28.7)",
+          "oklch(35.0% 0.178 28.7)",
+          "oklch(45.0% 0.178 28.7)",
+          "oklch(55.0% 0.178 28.7)",
+          "oklch(70.0% 0.178 28.7)",
+          "oklch(85.0% 0.178 28.7)",
+          "oklch(95.0% 0.178 28.7)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (Dark)",
+        "canonical": "#F2F2F2",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(25.0% 0.000 0)",
+          "oklch(35.0% 0.000 0)",
+          "oklch(45.0% 0.000 0)",
+          "oklch(55.0% 0.000 0)",
+          "oklch(70.0% 0.000 0)",
+          "oklch(85.0% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Paper (Dark)",
+        "canonical": "#0B0B0C",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 0)",
+          "oklch(25.0% 0.002 0)",
+          "oklch(35.0% 0.002 0)",
+          "oklch(45.0% 0.002 0)",
+          "oklch(55.0% 0.002 0)",
+          "oklch(70.0% 0.002 0)",
+          "oklch(85.0% 0.002 0)",
+          "oklch(95.0% 0.002 0)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Muted Graphite (Dark)",
+        "canonical": "#A4A7AB",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 255.5)",
+          "oklch(25.0% 0.007 255.5)",
+          "oklch(35.0% 0.007 255.5)",
+          "oklch(45.0% 0.007 255.5)",
+          "oklch(55.0% 0.007 255.5)",
+          "oklch(70.0% 0.007 255.5)",
+          "oklch(85.0% 0.007 255.5)",
+          "oklch(95.0% 0.007 255.5)"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Grey (Dark)",
+        "canonical": "#2A2B2E",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 271.2)",
+          "oklch(25.0% 0.006 271.2)",
+          "oklch(35.0% 0.006 271.2)",
+          "oklch(45.0% 0.006 271.2)",
+          "oklch(55.0% 0.006 271.2)",
+          "oklch(70.0% 0.006 271.2)",
+          "oklch(85.0% 0.006 271.2)",
+          "oklch(95.0% 0.006 271.2)"
+        ]
+      },
+      "danger-dark": {
+        "role": "neutral",
+        "displayName": "Signal Red (Dark)",
+        "canonical": "#F2B8B5",
+        "tonalRamp": [
+          "oklch(15.0% 0.068 22.0)",
+          "oklch(25.0% 0.068 22.0)",
+          "oklch(35.0% 0.068 22.0)",
+          "oklch(45.0% 0.068 22.0)",
+          "oklch(55.0% 0.068 22.0)",
+          "oklch(70.0% 0.068 22.0)",
+          "oklch(85.0% 0.068 22.0)",
+          "oklch(95.0% 0.068 22.0)"
+        ]
+      },
+      "field-fill": {
+        "role": "neutral",
+        "displayName": "Field Fill",
+        "canonical": "#F1F1F2",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 0)",
+          "oklch(25.0% 0.001 0)",
+          "oklch(35.0% 0.001 0)",
+          "oklch(45.0% 0.001 0)",
+          "oklch(55.0% 0.001 0)",
+          "oklch(70.0% 0.001 0)",
+          "oklch(85.0% 0.001 0)",
+          "oklch(95.0% 0.001 0)"
+        ]
+      },
+      "field-fill-dark": {
+        "role": "neutral",
+        "displayName": "Field Fill Dark",
+        "canonical": "#1C1D1F",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 0)",
+          "oklch(25.0% 0.004 0)",
+          "oklch(35.0% 0.004 0)",
+          "oklch(45.0% 0.004 0)",
+          "oklch(55.0% 0.004 0)",
+          "oklch(70.0% 0.004 0)",
+          "oklch(85.0% 0.004 0)",
+          "oklch(95.0% 0.004 0)"
+        ]
+      },
+      "sheet-rule": {
+        "role": "neutral",
+        "displayName": "Sheet Rule",
+        "canonical": "#D6D6D6",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0)",
+          "oklch(25.0% 0.000 0)",
+          "oklch(35.0% 0.000 0)",
+          "oklch(45.0% 0.000 0)",
+          "oklch(55.0% 0.000 0)",
+          "oklch(70.0% 0.000 0)",
+          "oklch(85.0% 0.000 0)",
+          "oklch(95.0% 0.000 0)"
+        ]
+      },
+      "wertstoff-flood": {
+        "role": "primary",
+        "displayName": "Wertstoff Flood",
+        "canonical": "#F2C200",
+        "tonalRamp": [
+          "oklch(15.0% 0.170 90.6)",
+          "oklch(25.0% 0.170 90.6)",
+          "oklch(35.0% 0.170 90.6)",
+          "oklch(45.0% 0.170 90.6)",
+          "oklch(55.0% 0.170 90.6)",
+          "oklch(70.0% 0.170 90.6)",
+          "oklch(85.0% 0.170 90.6)",
+          "oklch(95.0% 0.170 90.6)"
+        ]
+      },
+      "wertstoff-lid": {
+        "role": "primary",
+        "displayName": "Wertstoff Lid",
+        "canonical": "#D4A900",
+        "tonalRamp": [
+          "oklch(15.0% 0.154 90.3)",
+          "oklch(25.0% 0.154 90.3)",
+          "oklch(35.0% 0.154 90.3)",
+          "oklch(45.0% 0.154 90.3)",
+          "oklch(55.0% 0.154 90.3)",
+          "oklch(70.0% 0.154 90.3)",
+          "oklch(85.0% 0.154 90.3)",
+          "oklch(95.0% 0.154 90.3)"
+        ]
+      },
+      "papier-flood": {
+        "role": "primary",
+        "displayName": "Papier Flood",
+        "canonical": "#1E5AA8",
+        "tonalRamp": [
+          "oklch(15.0% 0.139 256.8)",
+          "oklch(25.0% 0.139 256.8)",
+          "oklch(35.0% 0.139 256.8)",
+          "oklch(45.0% 0.139 256.8)",
+          "oklch(55.0% 0.139 256.8)",
+          "oklch(70.0% 0.139 256.8)",
+          "oklch(85.0% 0.139 256.8)",
+          "oklch(95.0% 0.139 256.8)"
+        ]
+      },
+      "papier-lid": {
+        "role": "primary",
+        "displayName": "Papier Lid",
+        "canonical": "#174A8C",
+        "tonalRamp": [
+          "oklch(15.0% 0.122 256.7)",
+          "oklch(25.0% 0.122 256.7)",
+          "oklch(35.0% 0.122 256.7)",
+          "oklch(45.0% 0.122 256.7)",
+          "oklch(55.0% 0.122 256.7)",
+          "oklch(70.0% 0.122 256.7)",
+          "oklch(85.0% 0.122 256.7)",
+          "oklch(95.0% 0.122 256.7)"
+        ]
+      },
+      "bio-flood": {
+        "role": "primary",
+        "displayName": "Bio Flood",
+        "canonical": "#7A4B2A",
+        "tonalRamp": [
+          "oklch(15.0% 0.079 54.4)",
+          "oklch(25.0% 0.079 54.4)",
+          "oklch(35.0% 0.079 54.4)",
+          "oklch(45.0% 0.079 54.4)",
+          "oklch(55.0% 0.079 54.4)",
+          "oklch(70.0% 0.079 54.4)",
+          "oklch(85.0% 0.079 54.4)",
+          "oklch(95.0% 0.079 54.4)"
+        ]
+      },
+      "bio-lid": {
+        "role": "primary",
+        "displayName": "Bio Lid",
+        "canonical": "#633C21",
+        "tonalRamp": [
+          "oklch(15.0% 0.068 54.1)",
+          "oklch(25.0% 0.068 54.1)",
+          "oklch(35.0% 0.068 54.1)",
+          "oklch(45.0% 0.068 54.1)",
+          "oklch(55.0% 0.068 54.1)",
+          "oklch(70.0% 0.068 54.1)",
+          "oklch(85.0% 0.068 54.1)",
+          "oklch(95.0% 0.068 54.1)"
+        ]
+      },
+      "rest-flood": {
+        "role": "primary",
+        "displayName": "Rest Flood",
+        "canonical": "#4A4F55",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 252.9)",
+          "oklch(25.0% 0.012 252.9)",
+          "oklch(35.0% 0.012 252.9)",
+          "oklch(45.0% 0.012 252.9)",
+          "oklch(55.0% 0.012 252.9)",
+          "oklch(70.0% 0.012 252.9)",
+          "oklch(85.0% 0.012 252.9)",
+          "oklch(95.0% 0.012 252.9)"
+        ]
+      },
+      "rest-lid": {
+        "role": "primary",
+        "displayName": "Rest Lid",
+        "canonical": "#3A3E43",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 254.0)",
+          "oklch(25.0% 0.010 254.0)",
+          "oklch(35.0% 0.010 254.0)",
+          "oklch(45.0% 0.010 254.0)",
+          "oklch(55.0% 0.010 254.0)",
+          "oklch(70.0% 0.010 254.0)",
+          "oklch(85.0% 0.010 254.0)",
+          "oklch(95.0% 0.010 254.0)"
+        ]
+      },
+      "glass-white-flood": {
+        "role": "primary",
+        "displayName": "Glass White Flood",
+        "canonical": "#E4EAEC",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 219.6)",
+          "oklch(25.0% 0.007 219.6)",
+          "oklch(35.0% 0.007 219.6)",
+          "oklch(45.0% 0.007 219.6)",
+          "oklch(55.0% 0.007 219.6)",
+          "oklch(70.0% 0.007 219.6)",
+          "oklch(85.0% 0.007 219.6)",
+          "oklch(95.0% 0.007 219.6)"
+        ]
+      },
+      "glass-white-lid": {
+        "role": "primary",
+        "displayName": "Glass White Lid",
+        "canonical": "#C9D3D7",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 223.5)",
+          "oklch(25.0% 0.012 223.5)",
+          "oklch(35.0% 0.012 223.5)",
+          "oklch(45.0% 0.012 223.5)",
+          "oklch(55.0% 0.012 223.5)",
+          "oklch(70.0% 0.012 223.5)",
+          "oklch(85.0% 0.012 223.5)",
+          "oklch(95.0% 0.012 223.5)"
+        ]
+      },
+      "glass-green-flood": {
+        "role": "primary",
+        "displayName": "Glass Green Flood",
+        "canonical": "#2E7D4F",
+        "tonalRamp": [
+          "oklch(15.0% 0.106 154.6)",
+          "oklch(25.0% 0.106 154.6)",
+          "oklch(35.0% 0.106 154.6)",
+          "oklch(45.0% 0.106 154.6)",
+          "oklch(55.0% 0.106 154.6)",
+          "oklch(70.0% 0.106 154.6)",
+          "oklch(85.0% 0.106 154.6)",
+          "oklch(95.0% 0.106 154.6)"
+        ]
+      },
+      "glass-green-lid": {
+        "role": "primary",
+        "displayName": "Glass Green Lid",
+        "canonical": "#246640",
+        "tonalRamp": [
+          "oklch(15.0% 0.091 154.9)",
+          "oklch(25.0% 0.091 154.9)",
+          "oklch(35.0% 0.091 154.9)",
+          "oklch(45.0% 0.091 154.9)",
+          "oklch(55.0% 0.091 154.9)",
+          "oklch(70.0% 0.091 154.9)",
+          "oklch(85.0% 0.091 154.9)",
+          "oklch(95.0% 0.091 154.9)"
+        ]
+      },
+      "glass-brown-flood": {
+        "role": "primary",
+        "displayName": "Glass Brown Flood",
+        "canonical": "#8A5A2B",
+        "tonalRamp": [
+          "oklch(15.0% 0.089 62.8)",
+          "oklch(25.0% 0.089 62.8)",
+          "oklch(35.0% 0.089 62.8)",
+          "oklch(45.0% 0.089 62.8)",
+          "oklch(55.0% 0.089 62.8)",
+          "oklch(70.0% 0.089 62.8)",
+          "oklch(85.0% 0.089 62.8)",
+          "oklch(95.0% 0.089 62.8)"
+        ]
+      },
+      "glass-brown-lid": {
+        "role": "primary",
+        "displayName": "Glass Brown Lid",
+        "canonical": "#714821",
+        "tonalRamp": [
+          "oklch(15.0% 0.078 61.9)",
+          "oklch(25.0% 0.078 61.9)",
+          "oklch(35.0% 0.078 61.9)",
+          "oklch(45.0% 0.078 61.9)",
+          "oklch(55.0% 0.078 61.9)",
+          "oklch(70.0% 0.078 61.9)",
+          "oklch(85.0% 0.078 61.9)",
+          "oklch(95.0% 0.078 61.9)"
+        ]
+      },
+      "outside-flood": {
+        "role": "primary",
+        "displayName": "Outside Flood",
+        "canonical": "#25282C",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 255.6)",
+          "oklch(25.0% 0.009 255.6)",
+          "oklch(35.0% 0.009 255.6)",
+          "oklch(45.0% 0.009 255.6)",
+          "oklch(55.0% 0.009 255.6)",
+          "oklch(70.0% 0.009 255.6)",
+          "oklch(85.0% 0.009 255.6)",
+          "oklch(95.0% 0.009 255.6)"
+        ]
+      },
+      "outside-lid": {
+        "role": "primary",
+        "displayName": "Outside Lid",
+        "canonical": "#17191C",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 258.4)",
+          "oklch(25.0% 0.007 258.4)",
+          "oklch(35.0% 0.007 258.4)",
+          "oklch(45.0% 0.007 258.4)",
+          "oklch(55.0% 0.007 258.4)",
+          "oklch(70.0% 0.007 258.4)",
+          "oklch(85.0% 0.007 258.4)",
+          "oklch(95.0% 0.007 258.4)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "German destination name on a single-part flood only."
+      },
+      "display-stacked": {
+        "displayName": "Display Stacked",
+        "purpose": "German name inside a stacked band."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Shell screen titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Translation line under the German name."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Rows, steps, what-goes-in line, search input."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, lid-strip title, item name on a flood."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Secondary row lines, dates, city, feedback prompt."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "flood-rise",
+        "value": "translateY(screen height -> 0) 460ms Easing.out(Easing.exp) ~ cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The flood rises from the bottom once per result, with a light haptic."
+      },
+      {
+        "name": "flood-fade-reduced",
+        "value": "opacity 0 -> 1 180ms",
+        "purpose": "Replaces the rise under Reduce Motion."
+      },
+      {
+        "name": "press",
+        "value": "opacity 0.75 (buttons), 0.6 (rows)",
+        "purpose": "Pressed feedback; no scale or colour shift."
+      }
+    ],
+    "breakpoints": [],
+    "platform": {
+      "android": "verified on phone (finish review: light, dark, 200% font scale)",
+      "ios": "implemented, unverified on device"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink pill; the main action on shell screens, placed at the bottom.",
+      "html": "<button class=\"ds-btn-primary\">Weiter</button>",
+      "css": ".ds-btn-primary{font-family:-apple-system, Roboto, system-ui, sans-serif;min-height:52px;border-radius:26px;border:1.5px solid;padding:0 22px;font-size:17px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:opacity .1s;background:#111111;border-color:#111111;color:#FFFFFF}.ds-btn-primary:active{opacity:.75}.ds-btn-primary:focus-visible{outline:2px solid #111111;outline-offset:3px}.ds-btn-primary:disabled{opacity:.4}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ink-outline pill; default for doubt-state actions. May lead with a lid chip.",
+      "html": "<button class=\"ds-btn-secondary\"><span class=\"ds-chip-mini\"></span>Gelbe Tonne</button>",
+      "css": ".ds-btn-secondary{font-family:-apple-system, Roboto, system-ui, sans-serif;min-height:52px;border-radius:26px;border:1.5px solid;padding:0 22px;font-size:17px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:opacity .1s;background:transparent;border-color:#111111;color:#111111}.ds-btn-secondary:active{opacity:.75}.ds-btn-secondary:focus-visible{outline:2px solid #111111;outline-offset:3px}.ds-chip-mini{width:22px;height:22px;box-sizing:border-box;border-radius:5.5px;background:#F2C200;border:1px solid #D4A900;border-top:4.4px solid #D4A900}"
+    },
+    {
+      "name": "Destructive Button",
+      "kind": "button",
+      "refersTo": "button-destructive",
+      "description": "Bare red text action, left-aligned; settings only.",
+      "html": "<button class=\"ds-btn-destructive\">Verlauf löschen</button>",
+      "css": ".ds-btn-destructive{font-family:-apple-system, Roboto, system-ui, sans-serif;min-height:52px;background:none;border:0;padding:0;color:#B3261E;font-size:17px;font-weight:600;cursor:pointer}.ds-btn-destructive:active{opacity:.75}.ds-btn-destructive:focus-visible{outline:2px solid #B3261E;outline-offset:3px}.ds-btn-destructive:disabled{opacity:.4}"
+    },
+    {
+      "name": "Lid Chip",
+      "kind": "chip",
+      "refersTo": "chip-lid",
+      "description": "The only colour outside a flood: a tiny bin lid. The dashed empty variant means \"depends\".",
+      "html": "<span class=\"ds-chip\" style=\"background:#1E5AA8;border-color:#174A8C\"></span> <span class=\"ds-chip\" style=\"background:#F2C200;border-color:#D4A900\"></span> <span class=\"ds-chip ds-chip-depends\"></span>",
+      "css": ".ds-chip{display:inline-block;width:28px;height:28px;box-sizing:border-box;border-radius:7px;border:1px solid;border-top-width:5.6px;vertical-align:middle}.ds-chip-depends{background:transparent;border:1.5px dashed #5C5F63}"
+    },
+    {
+      "name": "Row",
+      "kind": "card",
+      "refersTo": "row",
+      "description": "Full-bleed hairline list row with leading lid chip and chevron.",
+      "html": "<div class=\"ds-row\" tabindex=\"0\"><span class=\"ds-row-chip\"></span><span class=\"ds-row-main\">Joghurtbecher<small>Gelbe Tonne</small></span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"#5C5F63\" stroke-width=\"2\"/></svg></div>",
+      "css": ".ds-row{font-family:-apple-system, Roboto, system-ui, sans-serif;display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 0;border-bottom:.5px solid #E3E3E3;color:#111111;font-size:17px;line-height:24px;cursor:pointer;width:320px}.ds-row:active{opacity:.6}.ds-row:focus-visible{outline:2px solid #111111}.ds-row-main{flex:1;display:flex;flex-direction:column}.ds-row-main small{font-size:15px;color:#5C5F63}.ds-row-chip{width:28px;height:28px;box-sizing:border-box;border-radius:7px;background:#F2C200;border:1px solid #D4A900;border-top:5.6px solid #D4A900}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Filled, borderless, 12px radius, leading search icon.",
+      "html": "<label class=\"ds-search\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"6.5\" fill=\"none\" stroke=\"#5C5F63\" stroke-width=\"2\"/><path d=\"M16 16l4.5 4.5\" stroke=\"#5C5F63\" stroke-width=\"2\"/></svg><input placeholder=\"Suchen\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:12px;background:#F1F1F2;width:300px}.ds-search input{flex:1;border:0;background:none;font-family:-apple-system, Roboto, system-ui, sans-serif;font-size:17px;color:#111111;outline:none}.ds-search:focus-within input{caret-color:#111111}"
+    },
+    {
+      "name": "Native Tabs",
+      "kind": "nav",
+      "refersTo": "tabs",
+      "description": "Platform tab bar on paper; ink selected, muted unselected.",
+      "html": "<nav class=\"ds-tabs\"><a class=\"on\">Kamera</a><a>Suche</a><a>Verlauf</a><a>Einstellungen</a></nav>",
+      "css": ".ds-tabs{display:flex;background:#FFFFFF;border-top:.5px solid #E3E3E3;font-family:-apple-system, Roboto, system-ui, sans-serif;width:360px}.ds-tabs a{flex:1;text-align:center;padding:12px 0;font-size:12px;color:#5C5F63;cursor:pointer}.ds-tabs a.on{color:#111111;font-weight:600}.ds-tabs a:hover{color:#111111}"
+    },
+    {
+      "name": "Flood",
+      "kind": "custom",
+      "refersTo": "lid-strip",
+      "description": "Signature result: full lid-colour flood, lid strip with hinge notch, huge German name, white step sheet, inverse pill CTA.",
+      "html": "<div class=\"ds-flood\"><div class=\"ds-lid\"><span>&#8592;</span><span>Köln</span></div><div class=\"ds-hinge\"></div><div class=\"ds-band\"><div class=\"ds-item\">Pizzakarton</div><div class=\"ds-german\">Papier&shy;tonne</div><div class=\"ds-tr\">Blaue Tonne · paper bin</div><ol class=\"ds-sheet\"><li><b>1</b>Essensreste entfernen</li><li><b>2</b>Flach falten</li></ol><button class=\"ds-cta\">Scan another</button></div></div>",
+      "css": ".ds-flood{font-family:-apple-system, Roboto, system-ui, sans-serif;width:340px;background:#1E5AA8;color:#FFFFFF;position:relative;overflow:hidden}.ds-lid{background:#174A8C;min-height:56px;display:flex;justify-content:space-between;align-items:center;padding:0 20px;font-size:15px;font-weight:600}.ds-hinge{position:absolute;top:56px;left:50%;margin-left:-38px;width:76px;height:10px;background:#174A8C;border-radius:0 0 6px 6px}.ds-band{padding:40px 24px 24px}.ds-item{font-size:17px;font-weight:600;opacity:.85}.ds-german{font-size:52px;line-height:56px;font-weight:800;letter-spacing:-1px;margin-top:8px;hyphens:manual}.ds-tr{font-size:20px;line-height:26px;font-weight:600;margin-top:8px}.ds-sheet{list-style:none;margin:24px 0 0;padding:0 16px;background:#FFFFFF;border-radius:16px;color:#111111}.ds-sheet li{display:flex;gap:12px;padding:14px 0;font-size:17px;line-height:24px}.ds-sheet li+li{border-top:.5px solid #D6D6D6}.ds-sheet b{min-width:14px}.ds-cta{font-family:-apple-system, Roboto, system-ui, sans-serif;min-height:52px;border-radius:26px;border:1.5px solid;padding:0 22px;font-size:17px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:opacity .1s;width:100%;justify-content:center;margin-top:24px;background:#FFFFFF;border-color:#FFFFFF;color:#1E5AA8}.ds-cta:active{opacity:.75}.ds-cta:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Screen Is the Lid",
+    "overview": "Every answer turns the phone into the lid of the right bin: the whole screen floods in the destination's lid colour, capped by a darker lid strip with a hinge notch, with the German bin name set huge so the person can match screen to lid in the courtyard. Everything that is not an answer stays out of the way: a neutral ink-and-white native shell with system type, native tabs and plain hairline lists.\n\nThe system is deliberately two-state. The shell is quiet and colourless; the flood is loud and monochrome. Colour carries meaning (which bin) and nothing else, so it never decorates. Doubt states (confirm, no rule, unsure) stay in the neutral shell rather than borrowing a flood, because a flood is a promise about a bin.\n\nEvidence: Android phone build, finish-reviewed and shipped (light, dark, 200% font scale). iOS rendering (SF Symbols, NativeTabs, SF Pro) is implemented but **unverified** on device.",
+    "keyCharacteristics": [
+      "Neutral shell in ink and white, with true dark-mode counterparts.",
+      "Colour appears only as destination lid colours: full floods, stacked bands, and small lid chips.",
+      "System type at platform text-style sizes, scaling with Dynamic Type / font scale.",
+      "Pill buttons, hairline rows, no shadows.",
+      "One signature motion: the flood rises once from the bottom."
+    ],
+    "rules": [
+      {
+        "name": "The Colour Is a Bin Rule",
+        "body": "Outside a flood, the only colour on screen is a lid chip. No brand accent, no green leaf, no tinted cards, no coloured icons in the shell.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lid Pair Rule",
+        "body": "Every destination colour ships as a pair (flood + darker lid). A new destination is not added without both.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Huge Word Rule",
+        "body": "Only the German destination name is set at display size, and only on a flood. Shell screens top out at the 28px headline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tone Not Shadow Rule",
+        "body": "Separation comes from a darker lid tone or a hairline, never from a drop shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do flood the full screen in the destination's lid colour for every confident answer, with the lid strip and hinge notch on top.",
+      "Do set the German destination name as the largest thing on screen (800, 52/56), with the translation beneath it.",
+      "Do keep the shell ink and white with system type, native tabs and hairline rows.",
+      "Do use a lid chip (or the dashed depends chip) wherever a destination appears in a list.",
+      "Do place the primary action as a pill at the bottom of the screen.",
+      "Do honour Reduce Motion, Dynamic Type up to 200%, and 44px touch targets."
+    ],
+    "donts": [
+      "Don't use colour in the shell for anything except lid chips: no brand accent, no green-leaf eco cues.",
+      "Don't show a destination as a white card with a small coloured bin icon; the answer is the flood.",
+      "Don't use drop shadows; separate with lid tone or hairlines.",
+      "Don't put a flood on a doubt state (confirm, no rule, unsure); those stay neutral.",
+      "Don't animate the flood more than once per result (a crossfade under Reduce Motion)."
+    ]
+  }
+}

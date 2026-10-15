@@ -1,3 +1,5 @@
+import * as Haptics from 'expo-haptics';
+import { StatusBar } from 'expo-status-bar';
 import { Fragment, useEffect } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -6,7 +8,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Icon } from '@/components/ui';
 import type { Lang } from '@/data/types';
 import type { AnsweredPart } from '@/logic/decide';
-import { SWATCH } from '@/theme';
+import { SheetRule, SWATCH } from '@/theme';
 
 type Props = {
   parts: AnsweredPart[];
@@ -34,6 +36,7 @@ export function Flood({ parts, lang, city, title, againLabel, backLabel, onBack,
   useEffect(() => {
     rise.value = withTiming(0, { duration: 460, easing: Easing.out(Easing.exp) });
     fade.value = withTiming(1, { duration: 180 });
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
   }, [rise, fade]);
   const enter = useAnimatedStyle(() => ({ transform: [{ translateY: rise.value }], opacity: fade.value }));
   const first = SWATCH[parts[0].destination.swatch];
@@ -42,6 +45,7 @@ export function Flood({ parts, lang, city, title, againLabel, backLabel, onBack,
 
   return (
     <Animated.View style={[st.screen, { backgroundColor: last.flood }, enter]}>
+      <StatusBar style={first.on === '#FFFFFF' ? 'light' : 'dark'} />
       <View style={[st.lid, { backgroundColor: first.lid, paddingTop: insets.top }]}>
         <Pressable accessibilityRole="button" accessibilityLabel={backLabel} onPress={onBack} hitSlop={10} style={st.navButton}>
           <Icon name={{ ios: 'chevron.left', android: 'arrow_back', web: 'arrow_back' }} color={first.on} />
@@ -118,7 +122,7 @@ const st = StyleSheet.create({
   takes: { fontSize: 17, lineHeight: 24, marginTop: 10, opacity: 0.9 },
   sheet: { marginTop: 24, backgroundColor: '#FFFFFF', borderRadius: 16, paddingHorizontal: 16 },
   step: { flexDirection: 'row', gap: 12, paddingVertical: 14 },
-  stepRule: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: '#D6D6D6' },
+  stepRule: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: SheetRule },
   stepNum: { fontSize: 17, fontWeight: '700', color: '#111111', minWidth: 14 },
   stepText: { flex: 1, fontSize: 17, lineHeight: 24, color: '#111111' },
   inlineStep: { fontSize: 17, lineHeight: 24 },

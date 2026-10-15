@@ -6,12 +6,17 @@ export const Paper = '#FFFFFF';
 export const Muted = '#5C5F63';
 export const Rule = '#E3E3E3';
 export const Danger = '#B3261E';
+export const Field = '#F1F1F2';
+/** Divider between steps on the white sheet that sits on a flood. */
+export const SheetRule = '#D6D6D6';
 
 export const Dark = {
   ink: '#F2F2F2',
   paper: '#0B0B0C',
   muted: '#A4A7AB',
   rule: '#2A2B2E',
+  danger: '#F2B8B5',
+  field: '#1C1D1F',
 };
 
 /** Lid colours. `lid` is the darker strip that caps the flood; `on` is text on the flood. */

@@ -17,6 +17,6 @@ STORY: The person points the camera, sees one colour and one German word, reads 
 
 FIRST VIEWPORT: Result screen: the full screen in the lid colour; lid strip on top with back and city; item name small, German destination name at the system's largest style, translation and one line of what goes in; 1–3 steps on a white sheet; "Escanear otra cosa" pill at the thumb. Signature: stacked lids, one horizontal band per part when an item has parts. The flood rises from the bottom like a lid opening, once; a crossfade under Reduce Motion.
 
-FORM: Tonnendeckel, my top-ranked grounded candidate (1 of 7), chosen by the user as IMPECCABLE'S PICK over the assigned Abfallkalender. seed: none (unavailable)
+FORM: Tonnendeckel, my top-ranked grounded candidate (1 of 7), chosen by the user as IMPECCABLE'S PICK over the assigned Abfallkalender. seed: none (unavailable; the roll printed no SEED REFERENCE line and this CLI has no --check-seed)
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

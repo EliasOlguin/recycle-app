@@ -1,4 +1,5 @@
 import { Redirect, router, useLocalSearchParams } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { openBrowserAsync } from 'expo-web-browser';
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -89,10 +90,10 @@ function ResultFor({ scanId, classification }: { scanId: string; classification:
             const d = rule && destination(cityId, rule.destination);
             return (
               <Row key={cat} onPress={() => setAnswers({ ...answers, [outcome.partIndex]: cat })}>
-                {d ? <Chip swatch={d.swatch} /> : <View style={{ width: 28 }} />}
+                <Chip swatch={d?.swatch} />
                 <View style={{ flex: 1 }}>
                   <Body style={{ fontWeight: '600' }}>{CATEGORY[cat].name[lang]}</Body>
-                  {d && <Body muted style={{ fontSize: 15 }}>{d.german.replace(/­/g, '')}</Body>}
+                  <Body muted style={{ fontSize: 15 }}>{d ? d.german.replace(/­/g, '') : t.search.depends}</Body>
                 </View>
               </Row>
             );
@@ -110,14 +111,20 @@ function ResultFor({ scanId, classification }: { scanId: string; classification:
         closeLabel={t.result.back}
         title={q.text[lang]}
         sub={label}
-        actions={q.options.map((opt) => (
-          <Button
-            key={opt.category}
-            kind="secondary"
-            label={opt.label[lang]}
-            onPress={() => setAnswers({ ...answers, [outcome.partIndex]: opt.category })}
-          />
-        ))}
+        actions={q.options.map((opt) => {
+          const rule = RULES[cityId][opt.category];
+          // Answers that lead straight to a container show its colour, e.g. the three glass containers.
+          const lead = rule && destination(cityId, rule.destination).type === 'public_container' ? destination(cityId, rule.destination).swatch : undefined;
+          return (
+            <Button
+              key={opt.category}
+              kind="secondary"
+              label={opt.label[lang]}
+              leading={lead && <Chip swatch={lead} size={22} />}
+              onPress={() => setAnswers({ ...answers, [outcome.partIndex]: opt.category })}
+            />
+          );
+        })}
       />
     );
   }
@@ -160,6 +167,7 @@ function Neutral({ title, sub, onClose, closeLabel, children, actions }: { title
   const c = usePalette();
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.paper }}>
+      <StatusBar style="auto" />
       <View style={st.neutralNav}>
         <Pressable accessibilityRole="button" accessibilityLabel={closeLabel} onPress={onClose} hitSlop={10} style={st.close}>
           <Icon name={{ ios: 'xmark', android: 'close', web: 'close' }} color={c.ink} />
