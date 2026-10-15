@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<title>Abfallkalender – resultado</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#fff;color:#16181A;font-family:-apple-system,"SF Pro Text",Roboto,system-ui,sans-serif}
+.status{height:47px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:44px;border-bottom:1px solid #16181A}
+.nav b{font-size:17px;font-weight:600}
+.nav span{font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.item{display:flex;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid #D9DBDD}
+.thumb{width:52px;height:52px;background:#E8E9EA;border:1px solid #16181A}
+.item h2{font-size:17px;font-weight:600}
+.item p{font-size:13px;color:#4A4F55;margin-top:2px}
+.plate{background:#F2C200;margin:16px;padding:18px 18px 20px;border:2px solid #16181A}
+.plate .key{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid #16181A;background:#F2C200}
+.plate h1{font-size:40px;line-height:1.02;font-weight:800;letter-spacing:-.02em;margin-top:12px}
+.plate .de{font-size:15px;font-weight:600;margin-top:4px}
+.plate .es{font-size:15px;margin-top:10px;line-height:1.35}
+.steps{margin:0 16px;border-top:1px solid #16181A}
+.step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #D9DBDD;font-size:16px;line-height:1.3}
+.step i{font-style:normal;font-weight:700;width:18px}
+.cal{margin:18px 16px 0}
+.cal h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #16181A;border-left:1px solid #D9DBDD;margin-top:8px}
+.grid div{height:30px;border-right:1px solid #D9DBDD;border-bottom:1px solid #D9DBDD;font-size:10px;padding:2px 3px;color:#4A4F55;position:relative}
+.grid div u{position:absolute;bottom:4px;left:4px;width:8px;height:8px;border-radius:50%;text-decoration:none}
+.y{background:#F2C200}.b{background:#1E5AA8}.br{background:#7A4B2A}.g{background:#4A4F55}.gl{background:#2E7D4F}
+.today{outline:2px solid #16181A;outline-offset:-2px;color:#16181A!important;font-weight:700}
+.tabs{position:absolute;left:0;right:0;bottom:0;height:83px;border-top:1px solid #16181A;background:#fff;display:flex;justify-content:space-around;padding-top:8px}
+.tabs div{font-size:10px;text-align:center;color:#4A4F55;width:70px}
+.tabs div::before{content:"";display:block;width:24px;height:24px;margin:0 auto 4px;border:2px solid currentColor;border-radius:6px}
+.tabs .on{color:#16181A;font-weight:600}
+</style></head><body>
+<div class="status"></div>
+<div class="nav"><b>‹ Cámara</b><span>Köln · ES</span></div>
+<div class="item"><div class="thumb"></div><div><h2>Botella de champú</h2><p>Envase de plástico · seguro</p></div></div>
+<div class="plate">
+  <div class="key"><span class="dot"></span>Va en</div>
+  <h1>Wertstoff&shy;tonne</h1>
+  <div class="de">Gelbe Tonne · tacho amarillo</div>
+  <p class="es">Envases y objetos de plástico, metal y tetra brik.</p>
+</div>
+<div class="steps">
+  <div class="step"><i>1</i>Vaciala. No hace falta lavarla.</div>
+  <div class="step"><i>2</i>La tapa puede quedar puesta.</div>
+</div>
+<div class="cal">
+  <h3><span>Octubre</span><span>Tu calendario</span></h3>
+  <div class="grid">
+    <div>13<u class="y"></u></div><div>14</div><div>15<u class="b"></u></div><div>16<u class="br"></u></div><div>17</div><div>18<u class="gl"></u></div><div>19</div>
+    <div>20<u class="g"></u></div><div>21<u class="y"></u></div><div class="today">22<u class="y"></u></div><div>23</div><div>24</div><div>25</div><div>26</div>
+  </div>
+</div>
+<div class="tabs"><div class="on">Cámara</div><div>Buscar</div><div>Historial</div><div>Ajustes</div></div>
+</body></html>

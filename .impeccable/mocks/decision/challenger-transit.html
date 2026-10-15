@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<title>Mapa de líneas – resultado</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#0E1A33;color:#F4F1EA;font-family:-apple-system,"SF Pro Text",Roboto,system-ui,sans-serif;position:relative}
+.nav{padding:57px 16px 0;height:101px;display:flex;justify-content:space-between}
+.nav b{font-size:17px;font-weight:600}
+.nav span{font-size:13px;opacity:.7}
+.map{position:relative;height:330px;margin:0 16px}
+.line{position:absolute;height:8px;border-radius:4px}
+.v{position:absolute;width:8px;border-radius:4px}
+.st{position:absolute;width:26px;height:26px;border-radius:50%;background:#F4F1EA;border:6px solid #0E1A33;box-shadow:0 0 0 3px #F4F1EA}
+.lbl{position:absolute;font-size:13px;font-weight:600}
+.big{font-size:22px;font-weight:800}
+.card{margin:8px 16px 0;padding:16px;background:#F4F1EA;color:#0E1A33;border-radius:14px}
+.card .k{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;gap:8px;align-items:center}
+.card .k i{width:20px;height:8px;border-radius:4px;background:#F2C200}
+.card h1{font-size:32px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
+.card p{font-size:15px;margin-top:4px}
+.step{display:flex;gap:10px;font-size:15px;padding:10px 0;border-top:1px solid #D8D4CA}
+.step:first-of-type{margin-top:12px}
+.tabs{position:absolute;left:0;right:0;bottom:0;height:83px;border-top:1px solid #24345A;display:flex;justify-content:space-around;padding-top:8px}
+.tabs div{font-size:10px;text-align:center;opacity:.6;width:70px}
+.tabs div::before{content:"";display:block;width:24px;height:24px;margin:0 auto 4px;border:2px solid currentColor;border-radius:6px}
+.tabs .on{opacity:1}
+</style></head><body>
+<div class="nav"><b>‹ Cámara</b><span>Köln · red de separación</span></div>
+<div class="map">
+  <div class="line" style="background:#1E5AA8;top:40px;left:0;width:358px;opacity:.45"></div>
+  <div class="lbl" style="top:16px;left:0;color:#85A9DD">Papier</div>
+  <div class="line" style="background:#F2C200;top:150px;left:0;width:358px"></div>
+  <div class="lbl" style="top:122px;left:0;color:#F2C200">Wertstofftonne</div>
+  <div class="v" style="background:#7A4B2A;left:90px;top:150px;height:170px;opacity:.5"></div>
+  <div class="v" style="background:#2E7D4F;left:290px;top:40px;height:110px;opacity:.5"></div>
+  <div class="st" style="top:141px;left:180px"></div>
+  <div class="lbl big" style="top:186px;left:150px">Botella de champú</div>
+  <div class="lbl" style="top:216px;left:150px;opacity:.7">Estás acá</div>
+  <div class="line" style="background:#4A4F55;top:280px;left:0;width:358px;opacity:.45"></div>
+  <div class="lbl" style="top:256px;left:0;color:#9AA0A6">Restmüll</div>
+</div>
+<div class="card">
+  <div class="k"><i></i>Línea amarilla</div>
+  <h1>Wertstofftonne</h1>
+  <p>Gelbe Tonne · tacho amarillo</p>
+  <div class="step"><b>1</b>Vaciala. No hace falta lavarla.</div>
+  <div class="step"><b>2</b>La tapa puede quedar puesta.</div>
+</div>
+<div class="tabs"><div class="on">Cámara</div><div>Buscar</div><div>Historial</div><div>Ajustes</div></div>
+</body></html>
