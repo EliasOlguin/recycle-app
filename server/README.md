@@ -1,5 +1,7 @@
 # Backend
 
+**English** · [Español](README.es.md)
+
 Fastify + Postgres. Two endpoints:
 
 - `POST /classify` `{ image: base64, mediaType: "image/jpeg" | "image/png" | "image/webp", lang: "es" | "en" | "de" }` → `{ parts: [{ category, label, confidence }], alternatives? }`. The photo is not stored.
